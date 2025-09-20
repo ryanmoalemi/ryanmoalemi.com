@@ -1,12 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="10%" y1="0%" x2="90%" y2="100%">
-      <stop offset="0%" stop-color="#071124"/>
-      <stop offset="100%" stop-color="#112b57"/>
+    <linearGradient id="bg" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#071326"/>
+      <stop offset="100%" stop-color="#0f2a55"/>
+    </linearGradient>
+    <linearGradient id="helix" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60d3ff"/>
+      <stop offset="100%" stop-color="#8fa5ff"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <path d="M22 16c6 6 6 14 0 20s-6 14 0 20" fill="none" stroke="#8fc8ff" stroke-width="5" stroke-linecap="round"/>
-  <path d="M42 16c-6 6-6 14 0 20s6 14 0 20" fill="none" stroke="#4ab3ff" stroke-width="5" stroke-linecap="round"/>
-  <path d="M20 24h24M20 40h24" stroke="#b5e4ff" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+  <path d="M20 18c8 0 18 28 24 28" fill="none" stroke="url(#helix)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <path d="M44 18c-8 0-18 28-24 28" fill="none" stroke="url(#helix)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <path d="M20 26h24M20 38h24" stroke="#bde6ff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path fill="#e6f3ff" d="M12 15h16c8 0 13 4 13 10 0 5-3.4 8.4-9 9.6L37 49h-8l-7-13h-4v13h-6V15zm6 6v9h9c3.5 0 5.5-1.8 5.5-4.5S30.5 21 27 21h-9z"/>
+  <path fill="#e6f3ff" d="M35 15h7l6 12 6-12h7v34h-6V27l-7 13-7-13v22h-6V15z"/>
 </svg>
