@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Moalemi | Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="hero">
+        <div class="hero__content">
+            <p class="hero__eyebrow">Ryan Moalemi</p>
+            <h1 class="hero__headline">A new digital home is on the way.</h1>
+            <p class="hero__subcopy">I&#39;m crafting something worth waiting for. Check back soon or drop a note to stay in the loop.</p>
+            <a class="hero__cta" href="mailto:hello@ryanmoalemi.com">hello@ryanmoalemi.com</a>
+        </div>
+        <footer class="hero__footer">© <span id="year"></span> Ryan Moalemi. All rights reserved.</footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
