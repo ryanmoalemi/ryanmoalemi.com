@@ -18,6 +18,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: safe center;
+    justify-content: safe center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: min(640px, 90vw);
+    padding-block: 1.25rem;
 }
 
 .hero {
@@ -85,9 +96,46 @@ body {
     text-align: center;
 }
 
+.page__links {
+    width: 100%;
+    margin: 0;
+    padding-inline: 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    text-wrap: balance;
+    color: rgba(248, 250, 252, 0.5);
+}
+
+.page__links a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+.page__links a:hover,
+.page__links a:focus-visible {
+    color: rgba(248, 250, 252, 0.85);
+}
+
+.page__links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
 @media (max-width: 420px) {
     .hero {
         padding: 2.5rem 1.6rem;
         gap: 2rem;
+    }
+
+    .page {
+        gap: 1rem;
+        padding-block: 1rem;
+    }
+
+    .page__links {
+        line-height: 1.55;
     }
 }
