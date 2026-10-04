@@ -1,0 +1,21 @@
+# GitHub Pages builds this repo with Jekyll 3, which replaces the default
+# exclude list. Repeat those defaults, and keep markdown out of the site.
+exclude:
+  - "*.md"
+  - "**/*.md"
+  - README.md
+  - AGENTS.md
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Stop Jekyll from turning markdown into public HTML pages such as /AGENTS.html.
+optional_front_matter:
+  enabled: false
