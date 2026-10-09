@@ -19,3 +19,14 @@ exclude:
 # Stop Jekyll from turning markdown into public HTML pages such as /AGENTS.html.
 optional_front_matter:
   enabled: false
+
+# Publish the static Next.js export at /patient-demo/. Jekyll skips names that
+# start with "_" (e.g. _next/, _buildManifest.js), so list them explicitly.
+# (.nojekyll is not used because the site relies on the exclude list above.)
+include:
+  - _next
+  - _buildManifest.js
+  - _ssgManifest.js
+  - _not-found
+  - "_app-*.js"
+  - "_error-*.js"
