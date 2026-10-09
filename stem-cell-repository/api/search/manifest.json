@@ -1,0 +1,12 @@
+{
+  "version": "0.1.0",
+  "shards": [
+    {
+      "file": "shard-000.json",
+      "bytes": 1228085,
+      "lines": 8698
+    }
+  ],
+  "total_bytes": 1228085,
+  "total_lines": 8698
+}

@@ -4,3 +4,4 @@ Disallow: /AGENTS.md
 Disallow: /README.md
 
 Sitemap: https://ryanmoalemi.com/sitemap.xml
+Sitemap: https://ryanmoalemi.com/stem-cell-repository/sitemap.xml

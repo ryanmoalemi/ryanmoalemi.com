@@ -20,11 +20,15 @@ exclude:
 optional_front_matter:
   enabled: false
 
-# Publish the static Next.js export at /patient-demo/. Jekyll skips names that
-# start with "_" (e.g. _next/, _buildManifest.js), so list them explicitly.
+# Publish static Next.js exports. Jekyll skips names that start with "_"
+# (e.g. _next/, _buildManifest.js), so list them explicitly.
 # (.nojekyll is not used because the site relies on the exclude list above.)
+# stem-cell-repository/_next is the only underscore directory in that export.
+# Nested _buildManifest.js, _ssgManifest.js, _not-found, _app-*.js, and
+# _error-*.js are covered by the filename entries below.
 include:
   - _next
+  - stem-cell-repository/_next
   - _buildManifest.js
   - _ssgManifest.js
   - _not-found

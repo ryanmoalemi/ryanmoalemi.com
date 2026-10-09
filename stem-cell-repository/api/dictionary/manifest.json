@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "shards": [
+    {
+      "file": "shard-000.json",
+      "bytes": 1499947,
+      "lines": 15547
+    },
+    {
+      "file": "shard-001.json",
+      "bytes": 1499972,
+      "lines": 16764
+    },
+    {
+      "file": "shard-002.json",
+      "bytes": 289845,
+      "lines": 3240
+    }
+  ],
+  "total_bytes": 3289764,
+  "total_lines": 35551
+}

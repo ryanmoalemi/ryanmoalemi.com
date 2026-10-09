@@ -1,0 +1,608 @@
+{
+  "generated_at": "2026-10-09T10:34:27+00:00",
+  "matcher_version": "0.2.4",
+  "accept_threshold": 0.75,
+  "matched_experiments_deduped": 99435,
+  "matched_records": 100328,
+  "distinct_lines": 8698,
+  "trials_indexed": 219,
+  "trials_linked": 9,
+  "trial_links": [
+    {
+      "nct_id": "NCT01344993",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "Safety and Tolerability of Sub-retinal Transplantation of hESC Derived RPE (MA09-hRPE) Cells in Patients With Advanced Dry Age Related Macular Degeneration"
+    },
+    {
+      "nct_id": "NCT01345006",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "ma09"
+    },
+    {
+      "nct_id": "NCT01469832",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "MA09-hRPE"
+    },
+    {
+      "nct_id": "NCT01625559",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "Safety and Tolerability of MA09-hRPE Cells in Patients With Stargardt's Macular Dystrophy(SMD)"
+    },
+    {
+      "nct_id": "NCT01674829",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "A PhaseI/IIa Study to Determine the Safety and Tolerability of MA09-hRPE Cells in Patients With Advanced Dry AMD"
+    },
+    {
+      "nct_id": "NCT02122159",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "ma09"
+    },
+    {
+      "nct_id": "NCT02445612",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "ma09"
+    },
+    {
+      "nct_id": "NCT02463344",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "ma09"
+    },
+    {
+      "nct_id": "NCT02563782",
+      "cell_line_id": "CVCL_C344",
+      "cell_line_name": "MA09",
+      "confidence": 0.93,
+      "evidence": "Sub-retinal transplantation of MA09-hRPE cells; tacrolimus and mycophenolate mofetil; Placebo tacrolimus and mycophenolate mofetil; Sham Surgery"
+    }
+  ],
+  "accuracy": {
+    "reviewer": "Reviewed by an automated agent pending human audit. The human_label column is still blank.",
+    "method": "For each of 500 accepted free-text matches (stratified by source, seed 20261009), the agent read the stored evidence and the source fields (cell line, sample name, title, extra). Archive records were fetched when the stored text was a series description or a short alias. Differentiated progeny that name the parent line, and mixtures that name the line, were counted as correct. Matcher 0.2.4.",
+    "sample_size": 500,
+    "seed": 20261009,
+    "correct": 500,
+    "incorrect": 0,
+    "unsure": 0,
+    "precision": 1.0,
+    "wilson95_low": 0.9923753814690964,
+    "wilson95_high": 0.9999999999999999,
+    "matcher_version": "0.2.4",
+    "round": 2
+  },
+  "experiments_indexed": 508613,
+  "lines_in_dictionary": 35551,
+  "human_pluripotent_lines_in_dictionary": 23294,
+  "by_source": [
+    {
+      "source": "biosample",
+      "n": 51920
+    },
+    {
+      "source": "arrayexpress",
+      "n": 28688
+    },
+    {
+      "source": "geo",
+      "n": 18008
+    },
+    {
+      "source": "sra",
+      "n": 1076
+    },
+    {
+      "source": "encode",
+      "n": 271
+    }
+  ],
+  "by_method": [
+    {
+      "method": "cellosaurus_xref",
+      "n": 10445
+    },
+    {
+      "method": "freetext",
+      "n": 94738
+    }
+  ],
+  "match_status_counts": [
+    {
+      "status": "accepted",
+      "n": 105183
+    },
+    {
+      "status": "excluded_non_human",
+      "n": 28521
+    },
+    {
+      "status": "organism_conflict",
+      "n": 25744
+    },
+    {
+      "status": "ambiguous",
+      "n": 25022
+    },
+    {
+      "status": "low_confidence",
+      "n": 5284
+    }
+  ],
+  "counting_rules": "Counting rules (v0.1)\n\nHeadline \u2014 public experiments matched to a standard line ID\n  Count a public metadata record once when it has at least one match with\n  status \"accepted\" and confidence >= 0.75 to a human\n  pluripotent cell line (Cellosaurus category Embryonic stem cell or Induced\n  pluripotent stem cell, NCBI taxonomy 9606, or an hPSCreg name attached to\n  such a line).\n\n  Grain. One record is one BioSample, GEO sample (GSM), SRA experiment\n  (SRX/ERX, not each run), ArrayExpress SDRF sample, CELLxGENE dataset, or\n  ENCODE accession cited by Cellosaurus. Cells are not counted. Raw reads are\n  not stored.\n\n  Deduplicate. Records that share a BioSample accession count once. A GEO\n  series (GSE) does not count when an accepted sample from that series is\n  already in the index. Records that cannot be linked stay separate; a GSM\n  and a SAMN for the same biology can still both count when the crosswalk is\n  missing. That gap is reported rather than guessed.\n\n  Do not count. Flag non-human lines (any species other than human), organism conflicts, ambiguous short names\n  (two human pluripotent lines share the alias and nothing longer breaks the\n  tie), low-confidence hits, and non-pluripotent stem populations\n  (mesenchymal, hematopoietic, cancer stem, and similar) are stored with a\n  status and excluded from the headline. Skip controlled-access records (dbGaP,\n  EGA, non-public consent) are not ingested.\n\nDistinct lines\n  Distinct Cellosaurus accessions (CVCL_) among accepted matches. hPSCreg\n  names are an alias of the CVCL line when Cellosaurus records the cross-reference.\n\nLinked trials\n  ClinicalTrials.gov studies returned by the iPSC/ESC/hPSC query that the\n  matcher links to a human pluripotent line at confidence >= 0.85, using\n  distinctive names only (no bare H1/H9/H7). The broader hPSC trial list is\n  reported separately and is not added to the experiment headline.\n\nMatcher 0.2 accepts a short name only for the WiCell codes H1, H7, H9, H13,\nand H14, and only when the cell-line field is exactly that code or the text\nhas pluripotent context. Clone numbers, control labels, and type-word stubs\n(ON-iPSC reduced to \"on\") are not matches. A name inside a longer hyphenated\ncode (SH-iPS15-10) is not a match. Differentiated progeny still count when\nthe parent line is named. Matcher 0.2.1 treats a filled non-human organism\nname (Sus scrofa, chimpanzee, E. coli, mixed sample) as a conflict even when\ntax_id is blank. Matcher 0.2.2 does not accept a title that names two lines,\nand it does not let a title override a different line in the cell-line field.\nAn unresolved short name in that field (bare H1, which is shared) still blocks\na different line named only in the title. A name that is only stopwords plus\na number (AND-3 read as \"and 3\") counts only when it is the whole field.\n\nReviewed precision is an agent read of a 500-row sample, stored separately\nfrom human_label. It is not a human audit. The stats page states the sample\nsize, the reviewed precision, and the Wilson interval from that read.",
+  "top_lines": [
+    {
+      "cell_line_id": "CVCL_9773",
+      "slug": "CVCL_9773",
+      "name": "WA09",
+      "category": "embryonic_stem",
+      "hpscreg_id": "WAe009-A",
+      "headline_experiments": 20844,
+      "accepted_experiments": 20934
+    },
+    {
+      "cell_line_id": "CVCL_K092",
+      "slug": "CVCL_K092",
+      "name": "409B2",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "CIRAi007-A",
+      "headline_experiments": 7234,
+      "accepted_experiments": 7240
+    },
+    {
+      "cell_line_id": "CVCL_9771",
+      "slug": "CVCL_9771",
+      "name": "WA01",
+      "category": "embryonic_stem",
+      "hpscreg_id": "WAe001-A",
+      "headline_experiments": 4137,
+      "accepted_experiments": 4145
+    },
+    {
+      "cell_line_id": "CVCL_AH05",
+      "slug": "CVCL_AH05",
+      "name": "HPSI0813i-fpdm_2",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 3077,
+      "accepted_experiments": 3077
+    },
+    {
+      "cell_line_id": "CVCL_Y803",
+      "slug": "CVCL_Y803",
+      "name": "GM25256",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "UCSFi001-A",
+      "headline_experiments": 1424,
+      "accepted_experiments": 1434
+    },
+    {
+      "cell_line_id": "CVCL_C6U9",
+      "slug": "CVCL_C6U9",
+      "name": "SCVI-111",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 1185,
+      "accepted_experiments": 1185
+    },
+    {
+      "cell_line_id": "CVCL_9767",
+      "slug": "CVCL_9767",
+      "name": "WIBR3",
+      "category": "embryonic_stem",
+      "hpscreg_id": "WIBRe001-A",
+      "headline_experiments": 1168,
+      "accepted_experiments": 1169
+    },
+    {
+      "cell_line_id": "CVCL_L206",
+      "slug": "CVCL_L206",
+      "name": "RC-17",
+      "category": "embryonic_stem",
+      "hpscreg_id": "RCe021-A",
+      "headline_experiments": 1085,
+      "accepted_experiments": 1085
+    },
+    {
+      "cell_line_id": "CVCL_7158",
+      "slug": "CVCL_7158",
+      "name": "HES-3",
+      "category": "embryonic_stem",
+      "hpscreg_id": "ESIBIe003-A",
+      "headline_experiments": 1066,
+      "accepted_experiments": 1068
+    },
+    {
+      "cell_line_id": "CVCL_B150",
+      "slug": "CVCL_B150",
+      "name": "HUES 2",
+      "category": "embryonic_stem",
+      "hpscreg_id": "HVRDe002-A",
+      "headline_experiments": 1015,
+      "accepted_experiments": 1015
+    },
+    {
+      "cell_line_id": "CVCL_B199",
+      "slug": "CVCL_B199",
+      "name": "HUES 64",
+      "category": "embryonic_stem",
+      "hpscreg_id": "",
+      "headline_experiments": 937,
+      "accepted_experiments": 937
+    },
+    {
+      "cell_line_id": "CVCL_JJ97",
+      "slug": "CVCL_JJ97",
+      "name": "ISMMSi012-B",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 786,
+      "accepted_experiments": 786
+    },
+    {
+      "cell_line_id": "CVCL_T853",
+      "slug": "CVCL_T853",
+      "name": "ND35662",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 768,
+      "accepted_experiments": 768
+    },
+    {
+      "cell_line_id": "CVCL_B810",
+      "slug": "CVCL_B810",
+      "name": "RUES2",
+      "category": "embryonic_stem",
+      "hpscreg_id": "RUESe002-A",
+      "headline_experiments": 624,
+      "accepted_experiments": 626
+    },
+    {
+      "cell_line_id": "CVCL_C437",
+      "slug": "CVCL_C437",
+      "name": "IPS(IMR90)-4",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "WISCi004-B",
+      "headline_experiments": 590,
+      "accepted_experiments": 590
+    },
+    {
+      "cell_line_id": "CVCL_JJ92",
+      "slug": "CVCL_JJ92",
+      "name": "ISMMSi005-B",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 538,
+      "accepted_experiments": 538
+    },
+    {
+      "cell_line_id": "CVCL_B207",
+      "slug": "CVCL_B207",
+      "name": "HUES 8",
+      "category": "embryonic_stem",
+      "hpscreg_id": "HVRDe008-A",
+      "headline_experiments": 497,
+      "accepted_experiments": 497
+    },
+    {
+      "cell_line_id": "CVCL_XD15",
+      "slug": "CVCL_XD15",
+      "name": "WISe001-A",
+      "category": "embryonic_stem",
+      "hpscreg_id": "WISe001-A",
+      "headline_experiments": 487,
+      "accepted_experiments": 487
+    },
+    {
+      "cell_line_id": "CVCL_JJ94",
+      "slug": "CVCL_JJ94",
+      "name": "ISMMSi008-A",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "ISMMSi008-A",
+      "headline_experiments": 485,
+      "accepted_experiments": 485
+    },
+    {
+      "cell_line_id": "CVCL_JJ91",
+      "slug": "CVCL_JJ91",
+      "name": "ISMMSi004-B",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 482,
+      "accepted_experiments": 482
+    },
+    {
+      "cell_line_id": "CVCL_JJ96",
+      "slug": "CVCL_JJ96",
+      "name": "ISMMSi011-B",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 474,
+      "accepted_experiments": 474
+    },
+    {
+      "cell_line_id": "CVCL_DP97",
+      "slug": "CVCL_DP97",
+      "name": "428C2",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "",
+      "headline_experiments": 469,
+      "accepted_experiments": 469
+    },
+    {
+      "cell_line_id": "CVCL_C212",
+      "slug": "CVCL_C212",
+      "name": "HS401",
+      "category": "embryonic_stem",
+      "hpscreg_id": "KIe019-A",
+      "headline_experiments": 465,
+      "accepted_experiments": 465
+    },
+    {
+      "cell_line_id": "CVCL_AE29",
+      "slug": "CVCL_AE29",
+      "name": "HPSI0114i-kolf_2",
+      "category": "induced_pluripotent",
+      "hpscreg_id": "WTSIi018-B",
+      "headline_experiments": 435,
+      "accepted_experiments": 483
+    }
+  ],
+  "ingest": [
+    {
+      "source": "arrayexpress",
+      "status": "complete",
+      "total": 246652,
+      "cursor": "3:1",
+      "message": "246652 arrayexpress rows",
+      "finished_at": "2026-10-09T09:51:29+00:00"
+    },
+    {
+      "source": "biosample",
+      "status": "complete",
+      "total": 79632,
+      "cursor": "83617",
+      "message": "79632 biosamples",
+      "finished_at": "2026-10-09T07:16:12+00:00"
+    },
+    {
+      "source": "cellosaurus",
+      "status": "complete",
+      "total": 35551,
+      "cursor": "2:0",
+      "message": "35551 lines in the dictionary",
+      "finished_at": "2026-10-09T07:12:33+00:00"
+    },
+    {
+      "source": "cellxgene",
+      "status": "complete",
+      "total": 16,
+      "cursor": "2238",
+      "message": "16 stem-cell or cell-line datasets",
+      "finished_at": "2026-10-09T07:12:46+00:00"
+    },
+    {
+      "source": "geo",
+      "status": "complete",
+      "total": 84806,
+      "cursor": "84806",
+      "message": "84806 GEO samples",
+      "finished_at": "2026-10-09T07:21:58+00:00"
+    },
+    {
+      "source": "hpscreg",
+      "status": "unavailable",
+      "total": null,
+      "cursor": "0",
+      "message": "hPSCreg did not serve a public name list on this run (HTTP 404 for https://hpscreg.eu/api/names). No registry records were copied. Matching uses hPSCreg identifiers that Cellosaurus already publishes under CC BY 4.0.",
+      "finished_at": "2026-10-09T07:03:55+00:00"
+    },
+    {
+      "source": "sra",
+      "status": "complete",
+      "total": 91178,
+      "cursor": "94007",
+      "message": "91178 SRA experiments",
+      "finished_at": "2026-10-09T07:28:23+00:00"
+    },
+    {
+      "source": "trials",
+      "status": "complete",
+      "total": 219,
+      "cursor": "3|",
+      "message": "219 iPSC/ESC/hPSC trials",
+      "finished_at": "2026-10-09T07:21:42+00:00"
+    }
+  ],
+  "index_license": "CC BY 4.0",
+  "index_attribution": "Stem Cell Line \u00d7 Experiment Index v0.1, a metadata compilation that resolves public experiment records to Cellosaurus and hPSCreg identifiers. https://ryanmoalemi.com/stem-cell-repository",
+  "sources": [
+    {
+      "id": "cellosaurus",
+      "name": "Cellosaurus",
+      "license": "CC BY 4.0",
+      "reuse": "Names, synonyms, and cross-references are reused with attribution. Release 56 (2026-06-25).",
+      "url": "https://www.cellosaurus.org/",
+      "terms": "https://www.cellosaurus.org/faq"
+    },
+    {
+      "id": "hpscreg",
+      "name": "hPSCreg",
+      "license": "Copyrights (not an open license)",
+      "reuse": "The registry was not bulk-copied. Public line names that appear here come from Cellosaurus cross-references (CC BY 4.0) or, when the API is up, from the public name list only. Donor, consent, and genome fields are never stored. Each line links back to hpscreg.eu.",
+      "url": "https://hpscreg.eu/",
+      "terms": "https://hpscreg.eu/"
+    },
+    {
+      "id": "biosample",
+      "name": "NCBI BioSample",
+      "license": "NCBI places no restrictions on the molecular data; submitters may still hold rights",
+      "reuse": "Public sample metadata only. Controlled-access records are skipped.",
+      "url": "https://www.ncbi.nlm.nih.gov/biosample/",
+      "terms": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    {
+      "id": "geo",
+      "name": "NCBI GEO",
+      "license": "NCBI places no restrictions on the molecular data; submitters may still hold rights",
+      "reuse": "Series and sample metadata via E-utilities. Raw measurements are not copied.",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/",
+      "terms": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    {
+      "id": "sra",
+      "name": "NCBI SRA",
+      "license": "NCBI places no restrictions on the molecular data; submitters may still hold rights",
+      "reuse": "RunInfo metadata (experiment, sample name, library strategy). Sequence files are not downloaded.",
+      "url": "https://www.ncbi.nlm.nih.gov/sra/",
+      "terms": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    {
+      "id": "arrayexpress",
+      "name": "EBI ArrayExpress / BioStudies",
+      "license": "EMBL-EBI adds no restrictions beyond the data owner's",
+      "reuse": "Study metadata and SDRF sample tables only. Raw and processed matrices are not copied.",
+      "url": "https://www.ebi.ac.uk/biostudies/arrayexpress",
+      "terms": "https://www.ebi.ac.uk/training/online/courses/functional-genomics-iii-submitting-data/re-use-of-functional-genomics-data/"
+    },
+    {
+      "id": "cellxgene",
+      "name": "CZ CELLxGENE Discover",
+      "license": "CC BY 4.0",
+      "reuse": "Dataset-level Discover metadata. Cell-by-gene matrices are not copied. Census cell_line ontology ids are not expanded in v0.1.",
+      "url": "https://cellxgene.cziscience.com/",
+      "terms": "https://cellxgene.cziscience.com/docs/032__Contribute%20and%20Publish%20Data"
+    },
+    {
+      "id": "encode",
+      "name": "ENCODE",
+      "license": "Released data may be used without restrictions; cite ENCODE",
+      "reuse": "Only accessions already cross-referenced by Cellosaurus. Files are not mirrored.",
+      "url": "https://www.encodeproject.org/",
+      "terms": "https://www.encodeproject.org/help/citing-encode/"
+    },
+    {
+      "id": "clinicaltrials",
+      "name": "ClinicalTrials.gov",
+      "license": "NLM terms; records are reusable with attribution",
+      "reuse": "Study metadata for the iPSC/ESC/hPSC query. No participant-level data.",
+      "url": "https://clinicaltrials.gov/",
+      "terms": "https://clinicaltrials.gov/about-site/terms-conditions"
+    }
+  ],
+  "search": {
+    "shards": 1,
+    "total_bytes": 1228085,
+    "total_lines": 8698
+  },
+  "downloads": [
+    {
+      "file": "ATTRIBUTION.txt",
+      "bytes": 3465
+    },
+    {
+      "file": "COUNTING_RULES.txt",
+      "bytes": 3048
+    },
+    {
+      "file": "stats.json",
+      "bytes": 9195
+    },
+    {
+      "file": "stem-cell-line-experiment-index.tsv.gz",
+      "bytes": 1699930
+    },
+    {
+      "file": "stem-cell-line-experiment-index.zip",
+      "bytes": 1377387
+    }
+  ],
+  "lists": [
+    {
+      "id": "headline",
+      "total": 99435,
+      "page_size": 40,
+      "pages": 2486
+    },
+    {
+      "id": "accepted",
+      "total": 100328,
+      "page_size": 40,
+      "pages": 2509
+    },
+    {
+      "id": "stored",
+      "total": 508613,
+      "page_size": 40,
+      "pages": 12716
+    },
+    {
+      "id": "source-arrayexpress",
+      "total": 28688,
+      "page_size": 40,
+      "pages": 718
+    },
+    {
+      "id": "source-biosample",
+      "total": 51920,
+      "page_size": 40,
+      "pages": 1298
+    },
+    {
+      "id": "source-encode",
+      "total": 271,
+      "page_size": 40,
+      "pages": 7
+    },
+    {
+      "id": "source-geo",
+      "total": 18008,
+      "page_size": 40,
+      "pages": 451
+    },
+    {
+      "id": "source-sra",
+      "total": 1076,
+      "page_size": 40,
+      "pages": 27
+    },
+    {
+      "id": "method-cellosaurus_xref",
+      "total": 10445,
+      "page_size": 40,
+      "pages": 262
+    },
+    {
+      "id": "method-freetext",
+      "total": 94738,
+      "page_size": 40,
+      "pages": 2369
+    }
+  ],
+  "dictionary_export": {
+    "total": 35551,
+    "human_pluripotent": 23294,
+    "shards": 3,
+    "total_bytes": 3289764
+  },
+  "trials_export": {
+    "total": 219,
+    "linked": 9
+  },
+  "base_path": "/stem-cell-repository",
+  "page_size": 40
+}
