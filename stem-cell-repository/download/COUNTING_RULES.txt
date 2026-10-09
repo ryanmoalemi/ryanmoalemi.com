@@ -1,0 +1,53 @@
+Counting rules (v0.1)
+
+Headline — public experiments matched to a standard line ID
+  Count a public metadata record once when it has at least one match with
+  status "accepted" and confidence >= 0.75 to a human
+  pluripotent cell line (Cellosaurus category Embryonic stem cell or Induced
+  pluripotent stem cell, NCBI taxonomy 9606, or an hPSCreg name attached to
+  such a line).
+
+  Grain. One record is one BioSample, GEO sample (GSM), SRA experiment
+  (SRX/ERX, not each run), ArrayExpress SDRF sample, CELLxGENE dataset, or
+  ENCODE accession cited by Cellosaurus. Cells are not counted. Raw reads are
+  not stored.
+
+  Deduplicate. Records that share a BioSample accession count once. A GEO
+  series (GSE) does not count when an accepted sample from that series is
+  already in the index. Records that cannot be linked stay separate; a GSM
+  and a SAMN for the same biology can still both count when the crosswalk is
+  missing. That gap is reported rather than guessed.
+
+  Do not count. Flag non-human lines (any species other than human), organism conflicts, ambiguous short names
+  (two human pluripotent lines share the alias and nothing longer breaks the
+  tie), low-confidence hits, and non-pluripotent stem populations
+  (mesenchymal, hematopoietic, cancer stem, and similar) are stored with a
+  status and excluded from the headline. Skip controlled-access records (dbGaP,
+  EGA, non-public consent) are not ingested.
+
+Distinct lines
+  Distinct Cellosaurus accessions (CVCL_) among accepted matches. hPSCreg
+  names are an alias of the CVCL line when Cellosaurus records the cross-reference.
+
+Linked trials
+  ClinicalTrials.gov studies returned by the iPSC/ESC/hPSC query that the
+  matcher links to a human pluripotent line at confidence >= 0.85, using
+  distinctive names only (no bare H1/H9/H7). The broader hPSC trial list is
+  reported separately and is not added to the experiment headline.
+
+Matcher 0.2 accepts a short name only for the WiCell codes H1, H7, H9, H13,
+and H14, and only when the cell-line field is exactly that code or the text
+has pluripotent context. Clone numbers, control labels, and type-word stubs
+(ON-iPSC reduced to "on") are not matches. A name inside a longer hyphenated
+code (SH-iPS15-10) is not a match. Differentiated progeny still count when
+the parent line is named. Matcher 0.2.1 treats a filled non-human organism
+name (Sus scrofa, chimpanzee, E. coli, mixed sample) as a conflict even when
+tax_id is blank. Matcher 0.2.2 does not accept a title that names two lines,
+and it does not let a title override a different line in the cell-line field.
+An unresolved short name in that field (bare H1, which is shared) still blocks
+a different line named only in the title. A name that is only stopwords plus
+a number (AND-3 read as "and 3") counts only when it is the whole field.
+
+Reviewed precision is an agent read of a 500-row sample, stored separately
+from human_label. It is not a human audit. The stats page states the sample
+size, the reviewed precision, and the Wilson interval from that read.

@@ -1,0 +1,63 @@
+Stem Cell Line × Experiment Index v0.1, a metadata compilation that resolves public experiment records to Cellosaurus and hPSCreg identifiers. https://ryanmoalemi.com/stem-cell-repository
+
+Index compilation license: CC BY 4.0.
+You may share and adapt the index with attribution and an indication of changes.
+Source records remain under the terms below. This archive does not contain raw reads,
+expression matrices, or controlled-access donor genomes.
+
+Cellosaurus (cellosaurus)
+  License: CC BY 4.0
+  Reuse: Names, synonyms, and cross-references are reused with attribution. Release 56 (2026-06-25).
+  Site: https://www.cellosaurus.org/
+  Terms: https://www.cellosaurus.org/faq
+
+hPSCreg (hpscreg)
+  License: Copyrights (not an open license)
+  Reuse: The registry was not bulk-copied. Public line names that appear here come from Cellosaurus cross-references (CC BY 4.0) or, when the API is up, from the public name list only. Donor, consent, and genome fields are never stored. Each line links back to hpscreg.eu.
+  Site: https://hpscreg.eu/
+  Terms: https://hpscreg.eu/
+
+NCBI BioSample (biosample)
+  License: NCBI places no restrictions on the molecular data; submitters may still hold rights
+  Reuse: Public sample metadata only. Controlled-access records are skipped.
+  Site: https://www.ncbi.nlm.nih.gov/biosample/
+  Terms: https://www.ncbi.nlm.nih.gov/home/about/policies/
+
+NCBI GEO (geo)
+  License: NCBI places no restrictions on the molecular data; submitters may still hold rights
+  Reuse: Series and sample metadata via E-utilities. Raw measurements are not copied.
+  Site: https://www.ncbi.nlm.nih.gov/geo/
+  Terms: https://www.ncbi.nlm.nih.gov/home/about/policies/
+
+NCBI SRA (sra)
+  License: NCBI places no restrictions on the molecular data; submitters may still hold rights
+  Reuse: RunInfo metadata (experiment, sample name, library strategy). Sequence files are not downloaded.
+  Site: https://www.ncbi.nlm.nih.gov/sra/
+  Terms: https://www.ncbi.nlm.nih.gov/home/about/policies/
+
+EBI ArrayExpress / BioStudies (arrayexpress)
+  License: EMBL-EBI adds no restrictions beyond the data owner's
+  Reuse: Study metadata and SDRF sample tables only. Raw and processed matrices are not copied.
+  Site: https://www.ebi.ac.uk/biostudies/arrayexpress
+  Terms: https://www.ebi.ac.uk/training/online/courses/functional-genomics-iii-submitting-data/re-use-of-functional-genomics-data/
+
+CZ CELLxGENE Discover (cellxgene)
+  License: CC BY 4.0
+  Reuse: Dataset-level Discover metadata. Cell-by-gene matrices are not copied. Census cell_line ontology ids are not expanded in v0.1.
+  Site: https://cellxgene.cziscience.com/
+  Terms: https://cellxgene.cziscience.com/docs/032__Contribute%20and%20Publish%20Data
+
+ENCODE (encode)
+  License: Released data may be used without restrictions; cite ENCODE
+  Reuse: Only accessions already cross-referenced by Cellosaurus. Files are not mirrored.
+  Site: https://www.encodeproject.org/
+  Terms: https://www.encodeproject.org/help/citing-encode/
+
+ClinicalTrials.gov (clinicaltrials)
+  License: NLM terms; records are reusable with attribution
+  Reuse: Study metadata for the iPSC/ESC/hPSC query. No participant-level data.
+  Site: https://clinicaltrials.gov/
+  Terms: https://clinicaltrials.gov/about-site/terms-conditions
+
+Cellosaurus release referenced by this build: 56 (2026-06-25), via https://api.cellosaurus.org/.
+Changes: free-text and cross-reference links were added by the Stem Cell Line × Experiment Index matcher.
