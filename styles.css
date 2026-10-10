@@ -107,6 +107,10 @@ body {
     color: rgba(248, 250, 252, 0.5);
 }
 
+.page__links + .page__links {
+    margin-top: -0.75rem;
+}
+
 .page__links a {
     color: inherit;
     text-decoration-thickness: 1px;
